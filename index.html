@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aakash Porwal | Senior Software Engineer</title>
+    <meta name="description" content="Senior Software Engineer specializing in Node.js, TypeScript, Kafka, and Real-time Distributed Systems. 3.5+ years building high-scale microservices.">
+    <meta property="og:title" content="Aakash Porwal | Senior Software Engineer">
+    <meta property="og:description" content="5+ years building high-scale microservices, optimizing data pipelines, and leading critical infra migrations.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">AP<span>.</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content reveal">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Aakash Porwal</h1>
+            <h2 class="hero-title">Senior Software Engineer | <span class="typing" id="typing"></span><span class="cursor">|</span></h2>
+            <p class="hero-subtitle">3.5+ years building high-scale microservices, optimizing data pipelines, and leading critical infra migrations.</p>
+            <p class="hero-location"><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+                <a href="#contact" class="btn btn-outline">Contact Me <i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Metrics -->
+    <section class="impact" id="impact">
+        <div class="container">
+            <h2 class="section-title reveal">Impact at a Glance</h2>
+            <p class="section-subtitle reveal">Numbers that define my engineering journey</p>
+            <div class="metrics-grid">
+                <div class="metric-card reveal">
+                    <div class="metric-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="metric-number" data-target="300" data-suffix="M+">0</div>
+                    <div class="metric-label">Events Processed Daily</div>
+                </div>
+                <div class="metric-card reveal">
+                    <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="metric-number" data-target="90" data-suffix="%+">0</div>
+                    <div class="metric-label">Cost Reduction Achieved</div>
+                </div>
+                <div class="metric-card reveal">
+                    <div class="metric-icon"><i class="fas fa-indian-rupee-sign"></i></div>
+                    <div class="metric-number" data-target="3.8" data-suffix="Cr" data-decimal="true">0</div>
+                    <div class="metric-label">Annual Savings Delivered</div>
+                </div>
+                <div class="metric-card reveal">
+                    <div class="metric-icon"><i class="fas fa-shield-halved"></i></div>
+                    <div class="metric-number" data-target="100" data-suffix="%">0</div>
+                    <div class="metric-label">Security Vulnerabilities Fixed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title reveal">Work Experience</h2>
+            <p class="section-subtitle reveal">My professional journey so far</p>
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <h3>Tata Digital Private Limited</h3>
+                            <span class="timeline-badge">Current</span>
+                        </div>
+                        <h4>Senior Backend Engineer – Data Platform</h4>
+                        <p class="timeline-meta"><i class="fas fa-calendar"></i> Dec 2021 – Present &nbsp; <i class="fas fa-location-dot"></i> Bangalore</p>
+                        <ul>
+                            <li>Architected <strong>JARVIS</strong>, a real-time analytics engine processing <strong>300M+ customer events daily</strong> — clickstreams, impressions, cart events, and visits.</li>
+                            <li>Reduced BigQuery monthly cost from <strong>₹35L to ₹3.4L</strong> — a <strong>90.3% reduction</strong>, saving <strong>~₹3.8 Cr annually</strong>.</li>
+                            <li>Migrated from Azure EventHub to Kafka — <strong>7x cost reduction</strong>.</li>
+                            <li>Reduced BigQuery costs by 70%, from <strong>$1.42M to $0.42M</strong> annually via partitioning, clustering & Storage API migration.</li>
+                            <li>Built end-to-end <strong>observability framework</strong> for BigQuery, DWH & Growth Marketing pipelines — reduced MTTD from hours to minutes.</li>
+                            <li>Designed <strong>generic backfilling framework</strong> — reduced turnaround from days to hours (~80% faster).</li>
+                            <li>Built <strong>Search Events Pipeline</strong> for Data Science team's ML workloads.</li>
+                            <li>Achieved <strong>100% security vulnerability remediation</strong> (51 → 0 critical/high findings via DefectDojo).</li>
+                            <li>Created baseline analytics tables — reduced ad-hoc data requests by <strong>40–50%</strong>.</li>
+                            <li>Reduced data inconsistency by 10% between Kafka and Databricks by rewriting ingestion pipelines in PySpark.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <h3>Kantar</h3>
+                        </div>
+                        <h4>Senior Analyst – Data Strategy & Engineering</h4>
+                        <p class="timeline-meta"><i class="fas fa-calendar"></i> Jul 2021 – Dec 2021</p>
+                        <ul>
+                            <li>Modeled data for large-scale <strong>MROI projects across South-East Asia</strong> for a <strong>$150B+ global CPG brand</strong>.</li>
+                            <li>Analyzed competitor data and recommended strategies to enhance business performance using <strong>advanced analytics</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <h3>RoboMQ</h3>
+                        </div>
+                        <h4>SDE Intern</h4>
+                        <p class="timeline-meta"><i class="fas fa-calendar"></i> Jan 2021 – Jun 2021</p>
+                        <ul>
+                            <li>Automated real-time <strong>Jira ticket creation/updates</strong> based on PagerDuty incident triggers using APIs.</li>
+                            <li>Built integration flows across <strong>CRM, ERP, and HRM</strong> using iPaaS and Spring Boot microservices.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title reveal">Featured Projects</h2>
+            <p class="section-subtitle reveal">Systems I've built and problems I've solved</p>
+            <div class="projects-grid">
+
+                <div class="project-card glass-card reveal">
+                    <div class="project-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>JARVIS — Real-time Analytics Engine</h3>
+                    <p>Architected a real-time analytics engine processing clickstreams, impressions, cart events, and visits from native & non-native journeys.</p>
+                    <div class="project-impact"><i class="fas fa-fire"></i> 300M+ events processed daily</div>
+                    <div class="project-tags">
+                        <span>Node.js</span><span>TypeScript</span><span>Kafka</span><span>BigQuery</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal">
+                    <div class="project-icon"><i class="fas fa-coins"></i></div>
+                    <h3>BigQuery Cost Optimization</h3>
+                    <p>Implemented partitioning, clustering, TTL policies, query rationalization, and redundant data purging across the analytics platform.</p>
+                    <div class="project-impact"><i class="fas fa-fire"></i> 90%+ cost reduction — ₹3.8Cr annual savings</div>
+                    <div class="project-tags">
+                        <span>BigQuery</span><span>SQL</span><span>GCP</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal">
+                    <div class="project-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Observability Framework</h3>
+                    <p>Built end-to-end monitoring covering job execution, data freshness, cost anomalies, and automated alerting for BigQuery, DWH & Growth Marketing.</p>
+                    <div class="project-impact"><i class="fas fa-fire"></i> MTTD reduced from hours to minutes</div>
+                    <div class="project-tags">
+                        <span>BigQuery</span><span>DWH</span><span>Firebase</span><span>Branch</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal">
+                    <div class="project-icon"><i class="fas fa-rotate"></i></div>
+                    <h3>Generic Backfilling Framework</h3>
+                    <p>Reusable framework for data reconciliation across BigQuery-DWH sync gaps, Kafka consumer lag, and upstream failures.</p>
+                    <div class="project-impact"><i class="fas fa-fire"></i> ~80% faster — days reduced to hours</div>
+                    <div class="project-tags">
+                        <span>BigQuery</span><span>Kafka</span><span>DWH</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal">
+                    <div class="project-icon"><i class="fas fa-magnifying-glass"></i></div>
+                    <h3>Search Events Pipeline</h3>
+                    <p>End-to-end pipeline: raw ingestion → deduplication → enrichment → aggregation → serving layer for Data Science ML workloads.</p>
+                    <div class="project-impact"><i class="fas fa-fire"></i> DS data prep: weeks → days</div>
+                    <div class="project-tags">
+                        <span>Kafka</span><span>BigQuery</span><span>Python</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal">
+                    <div class="project-icon"><i class="fas fa-fingerprint"></i></div>
+                    <h3>Event Instrumentation & Data Quality</h3>
+                    <p>Comprehensive audit identifying duplicate events firing within ≤5ms, with root cause analysis and source-level fixes.</p>
+                    <div class="project-impact"><i class="fas fa-fire"></i> Eliminated millions of redundant records</div>
+                    <div class="project-tags">
+                        <span>BigQuery</span><span>SQL</span><span>Analytics</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title reveal">Skills & Expertise</h2>
+            <p class="section-subtitle reveal">Technologies and strengths I bring to the table</p>
+            <div class="skills-grid">
+                <div class="skill-group glass-card reveal">
+                    <h3><i class="fas fa-code"></i> Languages & Frameworks</h3>
+                    <div class="skill-pills">
+                        <span>Go</span><span>Java</span><span>JavaScript</span><span>Node.js</span><span>Python</span><span>SQL</span><span>TypeScript</span>
+                    </div>
+                </div>
+                <div class="skill-group glass-card reveal">
+                    <h3><i class="fas fa-server"></i> Backend & Infrastructure</h3>
+                    <div class="skill-pills">
+                        <span>BigQuery</span><span>Databricks</span><span>Kafka</span><span>Microservices</span><span>REST APIs</span><span>Event-driven Architecture</span><span>iPaaS</span>
+                    </div>
+                </div>
+                <div class="skill-group glass-card reveal">
+                    <h3><i class="fas fa-wrench"></i> Tools & DevOps</h3>
+                    <div class="skill-pills">
+                        <span>GCP</span><span>Git</span><span>Jira</span><span>MongoDB</span><span>Postman</span><span>PySpark</span>
+                    </div>
+                </div>
+                <div class="skill-group glass-card reveal">
+                    <h3><i class="fas fa-brain"></i> Strengths</h3>
+                    <div class="skill-pills">
+                        <span>Cost Optimization</span><span>Event-Driven Architecture</span><span>High-Level Design</span><span>Real-time Data Processing</span><span>Observability</span><span>Data Quality</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title reveal">Education</h2>
+            <div class="education-card glass-card reveal">
+                <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="education-info">
+                    <h3>Bachelor of Engineering (CSE)</h3>
+                    <h4>Birla Institute of Technology, Mesra</h4>
+                    <p><i class="fas fa-location-dot"></i> Ranchi, Jharkhand &nbsp; | &nbsp; <i class="fas fa-calendar"></i> Graduated 2021 &nbsp; | &nbsp; <i class="fas fa-star"></i> GPA: 7.27</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Let's Connect</h2>
+            <p class="section-subtitle reveal">I'm always open to new opportunities and interesting conversations</p>
+            <div class="contact-grid">
+                <a href="mailto:aakashporwal111@gmail.com" class="contact-card glass-card reveal">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>aakashporwal111@gmail.com</p>
+                </a>
+                <a href="tel:+919549657392" class="contact-card glass-card reveal">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+91 9549657392</p>
+                </a>
+                <a href="#" class="contact-card glass-card reveal">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me</p>
+                </a>
+                <a href="https://github.com/aakashporwal1602" target="_blank" class="contact-card glass-card reveal">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>aakashporwal1602</p>
+                </a>
+            </div>
+            <div class="contact-cta reveal">
+                <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Built with <span class="heart">❤️</span> by Aakash Porwal</p>
+        <p>&copy; 2026 All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
