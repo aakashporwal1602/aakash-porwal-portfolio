@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aakash Porwal | Senior Software Engineer</title>
+<meta name="description" content="Senior Backend + Data Engineer with 4.5+ years. Architected JARVIS — 300M+ events/day. Kafka, BigQuery, Databricks, Node.js, TypeScript.">
+<meta property="og:title" content="Aakash Porwal | Senior Software Engineer">
+<meta property="og:description" content="Backend engineer specializing in distributed systems and real-time data platforms.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0B0E14;--surf:rgba(255,255,255,.035);--surf2:rgba(255,255,255,.06);
+  --bdr:rgba(255,255,255,.08);--bdr2:rgba(255,255,255,.14);
+  --txt:#E7ECF3;--muted:#8A9AB4;--muted2:#5A6880;
+  --violet:#7C5CFF;--cyan:#22D3EE;--amber:#F5B841;
+  --grad:linear-gradient(115deg,#7C5CFF 0%,#22D3EE 100%);
+  --fd:"Space Grotesk",system-ui,sans-serif;
+  --fb:"Inter",system-ui,-apple-system,sans-serif;
+  --fm:"JetBrains Mono",ui-monospace,monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--fb);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+strong{color:var(--txt);font-weight:600}
+
+/* blobs */
+.blobs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.45}
+.ba{width:500px;height:500px;left:-100px;top:-80px;background:radial-gradient(circle,#7C5CFF,transparent 68%);animation:da 22s ease-in-out infinite}
+.bb{width:440px;height:440px;right:-120px;top:25vh;background:radial-gradient(circle,#22D3EE,transparent 68%);opacity:.28;animation:db 26s ease-in-out infinite}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 50% at 50% 0%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 80% 50% at 50% 0%,#000 20%,transparent 70%)}
+@keyframes da{50%{transform:translate(30px,20px) scale(1.08)}}
+@keyframes db{50%{transform:translate(-24px,-16px) scale(1.12)}}
+
+/* progress */
+.prog{position:fixed;top:0;left:0;height:2px;background:var(--grad);z-index:200;width:0;box-shadow:0 0 10px rgba(124,92,255,.6);transition:width .1s linear}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,5vw,56px);transition:all .3s;border-bottom:1px solid transparent}
+nav.solid{background:rgba(11,14,20,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);padding-top:11px;padding-bottom:11px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--fd);font-weight:600;font-size:15px}
+.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--grad);color:#0B0E14;font-weight:700;font-size:13px;letter-spacing:.5px}
+.nav-links{display:flex;gap:28px;font-size:13.5px;color:var(--muted)}
+.nav-links a{position:relative;transition:color .2s}
+.nav-links a:hover{color:var(--txt)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;height:1.5px;width:0;background:var(--grad);transition:width .25s;border-radius:2px}
+.nav-links a:hover::after{width:100%}
+.nav-btn{display:flex;align-items:center;gap:7px;font-size:13px;padding:8px 15px;border-radius:9px;border:1px solid var(--bdr2);background:var(--surf);color:var(--txt);cursor:pointer;transition:all .2s;font-family:var(--fb)}
+.nav-btn:hover{background:var(--surf2);border-color:var(--violet);transform:translateY(-1px)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:14px;padding:12px 20px;border-radius:11px;cursor:pointer;transition:all .22s;border:1px solid transparent;font-family:var(--fb)}
+.btn-p{background:var(--grad);color:#08111a;font-weight:600;box-shadow:0 8px 26px -10px rgba(124,92,255,.7)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 14px 34px -10px rgba(34,211,238,.6)}
+.btn-g{background:var(--surf);border-color:var(--bdr2);color:var(--txt)}
+.btn-g:hover{transform:translateY(-2px);background:var(--surf2);border-color:var(--violet)}
+
+/* hero */
+.hero{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:clamp(130px,22vh,200px) clamp(20px,5vw,40px) 60px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--fm);font-size:12px;color:var(--muted);padding:6px 13px;border:1px solid var(--bdr);border-radius:100px;background:var(--surf);margin-bottom:24px}
+.pulse{width:5px;height:5px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+h1{font-family:var(--fd);font-weight:600;letter-spacing:-.03em;line-height:1.02;font-size:clamp(44px,8.5vw,96px);margin-bottom:16px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role-row{display:flex;align-items:center;gap:13px;height:32px;margin-bottom:22px}
+.role-tick{width:32px;height:2px;background:var(--grad);border-radius:2px;flex:none}
+.role{font-family:var(--fm);font-size:clamp(13px,2.2vw,18px);color:var(--cyan);animation:rin .45s ease}
+@keyframes rin{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.lede{max-width:620px;font-size:clamp(15px,2vw,18px);color:var(--muted);margin-bottom:32px}
+.cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.socials{display:flex;gap:8px;margin-left:4px}
+.soc{display:grid;place-items:center;width:42px;height:42px;border-radius:11px;border:1px solid var(--bdr);background:var(--surf);color:var(--muted);font-size:17px;transition:all .2s;text-decoration:none}
+.soc:hover{color:var(--txt);transform:translateY(-2px);border-color:var(--violet)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:52px;padding:24px;border:1px solid var(--bdr);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
+.stat-num{font-family:var(--fd);font-weight:600;font-size:clamp(24px,4.5vw,40px);color:var(--amber);letter-spacing:-.02em;line-height:1}
+.stat-suf{font-size:.52em;margin-left:2px}
+.stat-label{font-size:11.5px;color:var(--muted);margin-top:8px;font-family:var(--fm);letter-spacing:.2px}
+
+.scroll-ind{display:inline-flex;flex-direction:column;align-items:center;gap:5px;margin-top:52px;font-family:var(--fm);font-size:10.5px;color:var(--muted2);letter-spacing:1.5px;text-transform:uppercase;animation:bob 2.2s ease-in-out infinite;text-decoration:none}
+@keyframes bob{50%{transform:translateY(5px)}}
+
+/* marquee */
+.mq{position:relative;z-index:2;overflow:hidden;padding:20px 0;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);background:rgba(255,255,255,.008);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mq-track{display:flex;gap:10px;width:max-content;animation:mqs 32s linear infinite}
+.mq:hover .mq-track{animation-play-state:paused}
+@keyframes mqs{to{transform:translateX(-50%)}}
+.chip{display:inline-flex;align-items:center;font-family:var(--fm);font-size:12px;color:var(--muted);padding:6px 12px;border-radius:8px;border:1px solid var(--bdr);background:var(--surf);white-space:nowrap}
+.chip-out{background:transparent;transition:all .2s}
+.chip-out:hover{color:var(--txt);border-color:var(--violet)}
+
+/* sections */
+.section{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:clamp(70px,11vh,115px) clamp(20px,5vw,40px)}
+.kicker{font-family:var(--fm);font-size:11.5px;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:11px}
+.kicker::before{content:"";width:24px;height:1.5px;background:var(--grad)}
+h2{font-family:var(--fd);font-weight:600;letter-spacing:-.02em;line-height:1.12;font-size:clamp(26px,4.5vw,42px);margin-bottom:8px;max-width:800px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:start;margin-top:18px}
+.about-body p{color:var(--muted);font-size:15.5px;margin-bottom:15px}
+.about-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.tag{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--txt);padding:8px 13px;border-radius:100px;border:1px solid var(--bdr);background:var(--surf)}
+
+/* timeline */
+.timeline{margin-top:30px;display:flex;flex-direction:column;gap:12px}
+.xp{display:flex;gap:18px}
+.rail{position:relative;width:14px;flex:none;display:flex;justify-content:center;padding-top:22px}
+.rail::before{content:"";position:absolute;top:0;bottom:-12px;width:1.5px;background:linear-gradient(var(--bdr),transparent)}
+.xp:last-child .rail::before{display:none}
+.xnode{position:relative;z-index:1;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--xaccent,var(--violet))}
+.xbody{flex:1;border:1px solid var(--bdr);border-radius:14px;padding:20px 22px;background:var(--surf);transition:all .25s}
+.xbody.open,.xbody:hover{border-color:var(--bdr2);background:var(--surf2)}
+.xhead{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;cursor:pointer;background:none;border:none;width:100%;text-align:left;padding:0;font-family:inherit;color:inherit}
+.xrole{font-family:var(--fd);font-weight:600;font-size:18px;margin-bottom:4px;color:var(--txt)}
+.xmeta{font-size:13px;color:var(--muted)}
+.xright{display:flex;align-items:center;gap:10px;flex:none}
+.xdates{font-family:var(--fm);font-size:11.5px;color:var(--muted2);white-space:nowrap}
+.xcaret{color:var(--muted);font-size:18px;transition:transform .3s;display:inline-block}
+.xbody.open .xcaret{transform:rotate(180deg)}
+.xsummary{color:var(--muted);font-size:14px;margin-top:10px}
+.xdetail{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.xbody.open .xdetail{max-height:700px}
+.xpts{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-direction:column;gap:9px}
+.xpts li{display:flex;gap:9px;font-size:13.5px;color:var(--muted)}
+.bul{flex:none;width:5px;height:5px;margin-top:9px;border-radius:50%}
+.xtech{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+
+/* projects */
+.proj-grid{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{border:1px solid var(--bdr);border-radius:18px;padding:24px;background:var(--surf);transition:all .25s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;border-radius:18px;background:var(--grad);opacity:0;transition:opacity .3s;z-index:0}
+.card:hover{transform:translateY(-5px)}
+.card:hover::before{opacity:.06}
+.card>*{position:relative;z-index:1}
+.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.card-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(124,92,255,.2),rgba(34,211,238,.15));color:var(--cyan);border:1px solid var(--bdr);font-size:20px}
+.card-badge{font-family:var(--fm);font-size:10px;color:var(--muted2);letter-spacing:.4px;text-transform:uppercase;padding:4px 9px;border:1px solid var(--bdr);border-radius:100px}
+.card-title{font-family:var(--fd);font-weight:600;font-size:17px;margin-bottom:8px;line-height:1.3}
+.card-blurb{color:var(--muted);font-size:13.5px;margin-bottom:13px}
+.card-metrics{list-style:none;margin-bottom:14px;display:flex;flex-direction:column;gap:7px}
+.card-metrics li{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--txt);font-family:var(--fm)}
+.mdot{width:4px;height:4px;border-radius:50%;background:var(--amber);box-shadow:0 0 6px rgba(245,184,65,.5);flex:none}
+
+/* skills */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 24px}
+.fil{font-family:var(--fm);font-size:12px;color:var(--muted);cursor:pointer;padding:7px 14px;border-radius:100px;border:1px solid var(--bdr);background:var(--surf);transition:all .2s}
+.fil:hover{color:var(--txt);border-color:var(--bdr2)}
+.fil.on{color:#08111a;background:var(--grad);border-color:transparent;font-weight:500}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.skill{border:1px solid var(--bdr);border-radius:12px;padding:13px 15px;background:var(--surf);transition:all .2s}
+.skill:hover{transform:translateY(-2px);border-color:var(--bdr2);background:var(--surf2)}
+.skill-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.skill-glyph{display:grid;place-items:center;width:26px;height:26px;border-radius:7px;background:rgba(124,92,255,.14);color:var(--cyan);font-size:13px;flex:none}
+.skill-name{font-size:13px;font-weight:500;color:var(--txt)}
+.skill-bar{height:3px;border-radius:100px;background:rgba(255,255,255,.06);overflow:hidden}
+.skill-fill{display:block;height:100%;border-radius:100px;background:var(--grad);width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+
+/* education */
+.edu{margin-top:16px;display:flex;align-items:center;gap:16px;padding:22px 24px;border:1px solid var(--bdr);border-radius:16px;background:var(--surf)}
+.edu-icon{display:grid;place-items:center;width:50px;height:50px;border-radius:13px;background:rgba(124,92,255,.18);color:var(--cyan);font-size:24px;flex:none}
+.edu-body h3{font-family:var(--fd);font-weight:600;font-size:16px;margin-bottom:3px}
+.edu-body p{color:var(--muted);font-size:13.5px}
+.edu-meta{margin-left:auto;text-align:right;font-family:var(--fm);font-size:12px;color:var(--muted2)}
+.edu-gpa{color:var(--amber);margin-top:4px}
+
+/* contact */
+.contact{text-align:center}
+.contact .kicker{justify-content:center}
+.contact-sub{color:var(--muted);font-size:16px;max-width:520px;margin:0 auto 30px}
+.contact-actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
+
+/* footer */
+footer{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:28px clamp(20px,5vw,40px);border-top:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--muted2)}
+.footer-mono{font-family:var(--fm)}
+
+/* back to top */
+.totop{position:fixed;right:22px;bottom:22px;z-index:150;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;cursor:pointer;color:var(--txt);background:rgba(11,14,20,.88);backdrop-filter:blur(10px);border:1px solid var(--bdr2);font-size:20px;opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:all .3s;text-decoration:none}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{border-color:var(--violet);transform:translateY(-2px)}
+
+/* reveal */
+.rev{opacity:0;transform:translateY(20px);transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1)}
+.rev.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .nav-links{display:none}
+  .about-grid{grid-template-columns:1fr}
+  .proj-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr);gap:20px 12px}
+}
+@media(max-width:480px){
+  .skills-grid{grid-template-columns:1fr}
+  .edu{flex-wrap:wrap}
+  .edu-meta{margin-left:0}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rev{opacity:1;transform:none}
+  .skill-fill{width:var(--lvl)}
+}
+</style>
+</head>
+<body>
+
+<div class="blobs"><div class="blob ba"></div><div class="blob bb"></div><div class="grid-bg"></div></div>
+<div class="prog" id="prog"></div>
+
+<nav id="nav">
+  <div class="brand"><div class="brand-mark">AP</div><span>Aakash Porwal</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="nav-btn" href="public/Aakash_Porwal_SDE3_Resume.pdf" download>⬇ Résumé</a>
+</nav>
+
+<main>
+<section class="hero" id="top">
+  <div class="rev">
+    <div class="eyebrow">📍 Bangalore, India <div class="pulse"></div> open to Senior / SDE-3 roles</div>
+  </div>
+  <div class="rev" style="transition-delay:.08s">
+    <h1>Aakash <span class="grad">Porwal</span></h1>
+  </div>
+  <div class="rev" style="transition-delay:.15s">
+    <div class="role-row"><div class="role-tick"></div><span class="role" id="role">Backend & Distributed Systems</span></div>
+  </div>
+  <div class="rev" style="transition-delay:.22s">
+    <p class="lede">I design and operate high-scale, event-driven systems and real-time data platforms — from a <strong>300M+ events/day</strong> analytics engine to org-wide streaming and cost-governance at Tata Digital.</p>
+  </div>
+  <div class="rev" style="transition-delay:.3s">
+    <div class="cta-row">
+      <a class="btn btn-p" href="public/Aakash_Porwal_SDE3_Resume.pdf" download>⬇ Download résumé</a>
+      <a class="btn btn-g" href="#contact">Get in touch ↗</a>
+      <div class="socials">
+        <a class="soc" href="https://github.com/aakashporwal1602" target="_blank" rel="noreferrer" title="GitHub">⌥</a>
+        <a class="soc" href="https://www.linkedin.com/in/aakash-porwal-bab05b189" target="_blank" rel="noreferrer" title="LinkedIn">in</a>
+        <a class="soc" href="mailto:aakashporwal111@gmail.com" title="Email">✉</a>
+      </div>
+    </div>
+  </div>
+  <div class="rev" style="transition-delay:.38s">
+    <div class="stats">
+      <div><div class="stat-num"><span class="sn" data-val="300">0</span><span class="stat-suf">M+</span></div><div class="stat-label">events / day</div></div>
+      <div><div class="stat-num"><span class="sn" data-val="1.5" data-dec="1">0</span><span class="stat-suf">B</span></div><div class="stat-label">events migrated to Avro</div></div>
+      <div><div class="stat-num"><span class="sn" data-val="90">0</span><span class="stat-suf">%</span></div><div class="stat-label">BigQuery cost cut</div></div>
+      <div><div class="stat-num"><span class="sn" data-val="100">0</span><span class="stat-suf">TB</span></div><div class="stat-label">data managed</div></div>
+    </div>
+  </div>
+  <a class="scroll-ind rev" href="#about" style="transition-delay:.46s">scroll ↓</a>
+</section>
+
+<div class="mq rev"><div class="mq-track" id="mqt"></div></div>
+
+<section class="section" id="about">
+  <div class="rev"><p class="kicker">about</p></div>
+  <div class="about-grid">
+    <div class="rev"><h2>Backend engineer at the seam of <span class="grad">distributed systems</span> and data engineering.</h2></div>
+    <div class="about-body rev">
+      <p>I'm a backend-focused engineer with <strong>4.5+ years</strong> at Tata Digital. I architected <strong>JARVIS</strong> — the company's first platform to unify native-app and WebView journeys into a single customer journey — and have since owned platform-wide initiatives across Kafka, BigQuery and Databricks.</p>
+      <p>That includes a JSON-to-Avro migration over <strong>~1.5B events</strong>, a <strong>~90% BigQuery cost reduction</strong>, and <strong>100% data parity</strong> between our lakehouse and warehouse. I like owning systems end to end.</p>
+      <div class="about-tags">
+        <span class="tag">⚡ Distributed systems</span>
+        <span class="tag">🌊 Event-driven</span>
+        <span class="tag">📊 Data platforms</span>
+        <span class="tag">✦ Technical leadership</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="rev"><p class="kicker">experience</p></div>
+  <div class="rev"><h2>Where I've built</h2></div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<section class="section" id="work">
+  <div class="rev"><p class="kicker">selected work</p></div>
+  <div class="rev"><h2>Systems I've shipped</h2></div>
+  <div class="proj-grid" id="proj-grid"></div>
+</section>
+
+<section class="section" id="skills">
+  <div class="rev"><p class="kicker">toolkit</p></div>
+  <div class="rev"><h2>Skills & technologies</h2></div>
+  <div class="filters" id="filters"></div>
+  <div class="skills-grid" id="sg"></div>
+</section>
+
+<section class="section" id="edu">
+  <div class="rev"><p class="kicker">education</p></div>
+  <div class="edu rev">
+    <div class="edu-icon">🎓</div>
+    <div class="edu-body"><h3>B.E., Computer Science & Engineering</h3><p>Birla Institute of Technology, Mesra</p></div>
+    <div class="edu-meta"><div>2021</div><div class="edu-gpa">GPA 7.27</div></div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="rev"><p class="kicker">contact</p></div>
+  <div class="rev"><h2>Let's build something that <span class="grad">scales</span>.</h2></div>
+  <p class="contact-sub rev">Open to Senior Software Engineer / SDE-3 roles in backend, distributed systems, and platform engineering.</p>
+  <div class="contact-actions rev">
+    <a class="btn btn-p" href="mailto:aakashporwal111@gmail.com">✉ aakashporwal111@gmail.com</a>
+    <a class="btn btn-g" href="https://www.linkedin.com/in/aakash-porwal-bab05b189" target="_blank" rel="noreferrer">in LinkedIn</a>
+    <a class="btn btn-g" href="https://github.com/aakashporwal1602" target="_blank" rel="noreferrer">⌥ GitHub</a>
+  </div>
+</section>
+
+<footer class="rev">
+  <span>© 2025 Aakash Porwal</span>
+  <span class="footer-mono">designed & built · real-time by nature</span>
+</footer>
+</main>
+
+<a class="totop" id="totop" href="#top">↑</a>
+
+<script>
+const ROLES=["Backend & Distributed Systems","Real-Time Data Platforms","Event-Driven Architecture"];
+const TECH=["Node.js","TypeScript","Python","PySpark","Apache Kafka","Avro","BigQuery","Databricks","Apache Spark","Kubernetes","Docker","GCP","Azure","Redis","MongoDB","Grafana","Prometheus","Git","CI/CD","Confluent Schema Registry"];
+const XP=[
+  {company:"Tata Digital",accent:"#7C5CFF",roles:[
+    {title:"Senior Backend + Data Engineer",dates:"Jun 2024 — Present",summary:"Own platform-wide initiatives across Kafka, BigQuery and Databricks — cost, reliability, and data trust.",points:["Owned the platform-wide BigQuery cost-optimization strategy end-to-end — cutting BigQuery spend ~90%; mentored 2 engineers.","Led org-wide JSON→Avro migration for Kafka pipelines (~1.5B events) with Confluent Schema Registry — cutting storage footprint ~50%.","Achieved 100% data parity between Databricks (DWH) and BigQuery via reconciliation pipelines and validation jobs.","Designed streaming and micro-batch ingestion on Databricks with Bronze/Silver/Gold (medallion) PySpark pipelines.","Built a resilient backfilling & recovery framework — cutting recovery from days to hours while keeping data-consistency SLAs intact."],tech:["Kafka","Avro","Schema Registry","BigQuery","Databricks","PySpark","Spark"]},
+    {title:"Backend Engineer",dates:"Dec 2021 — Jun 2024",summary:"Architected and scaled JARVIS, the company's first-party real-time analytics platform.",points:["Architected JARVIS — first platform to stitch native-app and WebView journeys into a unified customer journey (Tata Neu, 1mg, BigBasket, Croma, Tata CLiQ). 300M+ events/day in production.","Engineered a multi-sink event-distribution layer — BigQuery (Mixpanel, BI), Meta, Firebase, Branch, MoEngage, and Kafka.","Cut BigQuery costs ~70% via partitioning, clustering, materialized views, and BigQuery Storage API.","Owned BigQuery observability end-to-end — slot utilization, query cost, job health, and failure rate monitoring.","Migrated event ingestion from Azure EventHub to Kafka — 7x event-processing cost reduction; mentored 2 interns."],tech:["Node.js","TypeScript","Express.js","AKS","Kafka","BigQuery","Redis","MongoDB"]}
+  ]},
+  {company:"Kantar",accent:"#22D3EE",roles:[{title:"Senior Analyst — Data Strategy & Engineering",dates:"Jul 2021 — Dec 2021",summary:"Data modeling for large-scale marketing-ROI programs.",points:["Modeled data for MROI programs across South-East Asia for a $150B+ global CPG brand.","Delivered competitor analysis and marketing-effectiveness recommendations."],tech:["SQL","Python","Data Modeling"]}]},
+  {company:"RoboMQ",accent:"#F5B841",roles:[{title:"Software Engineer Intern",dates:"Jan 2021 — Jun 2021",summary:"Backend microservices and event-driven integration automation.",points:["Built Spring Boot microservices in a distributed backend.","Automated real-time Jira ticket creation from PagerDuty triggers via REST API integrations.","Developed CRM/ERP/HRM integration flows on an in-house iPaaS."],tech:["Java","Spring Boot","Microservices","REST APIs"]}]}
+];
+const PROJECTS=[
+  {icon:"⚡",name:"JARVIS — Real-Time Analytics Platform",blurb:"First-party engine stitching native-app + WebView journeys into one customer journey across Tata Digital.",metrics:["300M+ events/day","native + WebView unification","multi-sink distribution"],tech:["Node.js","TypeScript","AKS","Kafka","BigQuery"]},
+  {icon:"🔄",name:"JSON → Avro Migration",blurb:"Org-wide Kafka pipeline migration to Avro with Confluent Schema Registry, enforcing schema contracts.",metrics:["~1.5B events","~50% storage cut","schema governance"],tech:["Kafka","Avro","Confluent Schema Registry"]},
+  {icon:"🗄",name:"Databricks Lakehouse Pipelines",blurb:"Streaming & micro-batch ingestion with Bronze/Silver/Gold pipelines and 100% BigQuery parity.",metrics:["medallion architecture","100% data parity","analytics + ML ready"],tech:["Databricks","PySpark","Spark","Kafka"]},
+  {icon:"📊",name:"BigQuery Cost Governance",blurb:"Platform-wide cost strategy — TTLs, lifecycle management, job governance, and dataset purging.",metrics:["~90% cost cut","~100 TB managed","durable guardrails"],tech:["BigQuery","SQL"]}
+];
+const SKILLS=[
+  {n:"Node.js",c:"lang",l:95},{n:"TypeScript",c:"lang",l:93},{n:"JavaScript",c:"lang",l:92},{n:"Python",c:"lang",l:88},{n:"PySpark",c:"lang",l:85},{n:"SQL",c:"lang",l:85},{n:"Java",c:"lang",l:65},
+  {n:"Apache Kafka",c:"stream",l:92},{n:"Avro",c:"stream",l:80},{n:"Schema Registry",c:"stream",l:78},{n:"Microservices",c:"stream",l:90},{n:"Event-Driven Arch",c:"stream",l:90},{n:"REST APIs",c:"stream",l:90},{n:"Express.js",c:"stream",l:85},
+  {n:"BigQuery",c:"data",l:92},{n:"Databricks",c:"data",l:85},{n:"Apache Spark",c:"data",l:82},{n:"Medallion Pipelines",c:"data",l:82},{n:"Data Pipelines",c:"data",l:88},{n:"Redis",c:"data",l:82},{n:"MongoDB",c:"data",l:82},
+  {n:"GCP",c:"cloud",l:85},{n:"Azure",c:"cloud",l:80},{n:"AKS",c:"cloud",l:80},{n:"Kubernetes",c:"cloud",l:80},{n:"Docker",c:"cloud",l:82},
+  {n:"Prometheus",c:"devops",l:76},{n:"Grafana",c:"devops",l:80},{n:"Git",c:"devops",l:90},{n:"CI/CD",c:"devops",l:82},{n:"GitHub Actions",c:"devops",l:80}
+];
+const CATS=[{id:"all",label:"All"},{id:"lang",label:"Languages"},{id:"stream",label:"Streaming & Backend"},{id:"data",label:"Data & Stores"},{id:"cloud",label:"Cloud & Infra"},{id:"devops",label:"Observability & CI/CD"}];
+const CAT_ICO={lang:"⌨",stream:"⚡",data:"🗄",cloud:"☁",devops:"📈"};
+
+// role rotate
+let ri=0;
+setInterval(()=>{
+  ri=(ri+1)%ROLES.length;
+  const el=document.getElementById('role');
+  el.style.animation='none';el.offsetHeight;
+  el.textContent=ROLES[ri];
+  el.style.animation='rin .45s ease';
+},2600);
+
+// marquee
+const mqt=document.getElementById('mqt');
+[...TECH,...TECH].forEach(t=>{const s=document.createElement('span');s.className='chip';s.textContent=t;mqt.appendChild(s);});
+
+// timeline
+const tl=document.getElementById('timeline');
+XP.forEach(org=>{
+  org.roles.forEach((role,ri2)=>{
+    const key=org.company+ri2;
+    const d=document.createElement('div');
+    d.className='xp rev';
+    const isFirst=ri2===0&&org.company==='Tata Digital';
+    d.innerHTML=`<div class="rail"><div class="xnode" style="--xaccent:${org.accent};border-color:${org.accent}"></div></div>
+    <div class="xbody${isFirst?' open':''}" id="${key}">
+      <button class="xhead" onclick="toggleX('${key}')">
+        <div>
+          <div class="xrole">${role.title}</div>
+          <div class="xmeta" style="color:${org.accent}">${org.company} &nbsp;·&nbsp; <span style="color:var(--muted2)">${role.dates}</span></div>
+        </div>
+        <div class="xright"><span class="xcaret" id="c${key}">⌄</span></div>
+      </button>
+      <p class="xsummary">${role.summary}</p>
+      <div class="xdetail">
+        <ul class="xpts">${role.points.map(p=>`<li><span class="bul" style="background:${org.accent}"></span>${p}</li>`).join('')}</ul>
+        <div class="xtech">${role.tech.map(t=>`<span class="chip chip-out">${t}</span>`).join('')}</div>
+      </div>
+    </div>`;
+    tl.appendChild(d);
+  });
+});
+
+function toggleX(key){
+  const b=document.getElementById(key);
+  const c=document.getElementById('c'+key);
+  const isOpen=b.classList.contains('open');
+  document.querySelectorAll('.xbody').forEach(x=>x.classList.remove('open'));
+  document.querySelectorAll('[id^=c]').forEach(x=>x.style.transform='');
+  if(!isOpen){b.classList.add('open');if(c)c.style.transform='rotate(180deg)';}
+}
+
+// projects
+const pg=document.getElementById('proj-grid');
+PROJECTS.forEach(p=>{
+  const d=document.createElement('div');d.className='card rev';
+  d.innerHTML=`<div class="card-top"><div class="card-icon">${p.icon}</div><span class="card-badge">Production · Tata Digital</span></div>
+  <div class="card-title">${p.name}</div>
+  <p class="card-blurb">${p.blurb}</p>
+  <ul class="card-metrics">${p.metrics.map(m=>`<li><span class="mdot"></span>${m}</li>`).join('')}</ul>
+  <div class="xtech">${p.tech.map(t=>`<span class="chip chip-out">${t}</span>`).join('')}</div>`;
+  pg.appendChild(d);
+});
+
+// skills
+let af='all';
+const fd=document.getElementById('filters');
+const sg=document.getElementById('sg');
+CATS.forEach(c=>{
+  const b=document.createElement('button');
+  b.className='fil'+(c.id==='all'?' on':'');
+  b.textContent=c.label;
+  b.onclick=()=>{af=c.id;document.querySelectorAll('.fil').forEach(x=>x.classList.remove('on'));b.classList.add('on');renderS();};
+  fd.appendChild(b);
+});
+function renderS(){
+  sg.innerHTML='';
+  const shown=af==='all'?SKILLS:SKILLS.filter(s=>s.c===af);
+  shown.forEach((s,i)=>{
+    const d=document.createElement('div');d.className='skill';
+    d.innerHTML=`<div class="skill-head"><div class="skill-glyph">${CAT_ICO[s.c]||'⚙'}</div><span class="skill-name">${s.n}</span></div>
+    <div class="skill-bar"><span class="skill-fill" style="transition-delay:${Math.min(i*28,380)}ms"></span></div>`;
+    sg.appendChild(d);
+  });
+  requestAnimationFrame(()=>{
+    document.querySelectorAll('.skill-fill').forEach((el,i)=>{if(shown[i])el.style.width=shown[i].l+'%';});
+  });
+}
+renderS();
+
+// scroll
+const prog=document.getElementById('prog');
+const navEl=document.getElementById('nav');
+const totop=document.getElementById('totop');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const max=h.scrollHeight-h.clientHeight;
+  prog.style.width=(max>0?(h.scrollTop/max*100):0)+'%';
+  navEl.className=h.scrollTop>20?'solid':'';
+  totop.className='totop'+(h.scrollTop>500?' on':'');
+},{passive:true});
+
+// reveal
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');});},{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+
+// count up
+const sio=new IntersectionObserver(e=>{
+  e.forEach(x=>{
+    if(x.isIntersecting){
+      const el=x.target,target=parseFloat(el.dataset.val),dec=parseInt(el.dataset.dec||0),dur=1600,t0=performance.now();
+      const tick=t=>{const p=Math.min((t-t0)/dur,1),v=target*(1-Math.pow(1-p,3));el.textContent=dec?v.toFixed(dec):Math.round(v).toLocaleString();if(p<1)requestAnimationFrame(tick);};
+      requestAnimationFrame(tick);sio.unobserve(el);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('.sn').forEach(el=>sio.observe(el));
+</script>
+</body>
+</html>
