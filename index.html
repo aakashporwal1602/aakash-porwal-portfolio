@@ -301,7 +301,6 @@ footer .fm{font-family:var(--fm)}
     <a href="#stack">Stack</a>
     <a href="#experience">Experience</a>
     <a href="#opensource">Open Source</a>
-    <a href="#writing">Writing</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="nav-right">
@@ -408,14 +407,6 @@ footer .fm{font-family:var(--fm)}
   </div>
 </section>
 
-<!-- ============ WRITING / BLOG ============ -->
-<section class="section" id="writing">
-  <div class="reveal"><p class="kicker">Engineering Writing</p></div>
-  <div class="reveal"><h2 class="title">Notes from production</h2></div>
-  <div class="reveal"><p class="section-sub">Deep-dives on the systems I've built and the tradeoffs behind them. Full articles on LinkedIn &amp; GitHub.</p></div>
-  <div class="blog-grid" id="blog"></div>
-</section>
-
 <!-- ============ OPEN SOURCE ============ -->
 <section class="section" id="opensource">
   <div class="os-head">
@@ -519,16 +510,6 @@ const XP = [
       "Automated real-time Jira ticket creation from PagerDuty incidents via API integrations on an in-house iPaaS."],
     tech:["Java","Spring Boot","Microservices","REST APIs"]}
   ]}
-];
-
-/* ================= BLOG ================= */
-const BLOG = [
-  {tag:"Streaming",t:"Making 1.5B Kafka events exactly-once, in effect",d:"Delivery is at-least-once — so how do you guarantee no double effects across 1.5B events? Idempotent consumers, dedup keys and the outbox pattern.",read:"7 min",href:"https://www.linkedin.com/in/aakash-porwal-bab05b189"},
-  {tag:"Data Engineering",t:"CDC to a Lakehouse: Debezium → Kafka → Iceberg",d:"How row-level Postgres changes become a queryable medallion lakehouse with exactly-once commits, schema evolution and idempotent MERGE.",read:"9 min",href:"https://github.com/aakashporwal1602/cdc-lakehouse-platform"},
-  {tag:"Cost",t:"Cutting BigQuery spend by ~90% on 100 TB",d:"Partitioning, clustering, TTLs, materialized views and the Storage API — the levers that scan less and store smarter, with governance that sticks.",read:"6 min",href:"https://www.linkedin.com/in/aakash-porwal-bab05b189"},
-  {tag:"System Design",t:"A rate limiter that survives a flash sale",d:"Token bucket in Redis with an atomic Lua script, sharded by key and fail-open — allowing bursts while staying correct across the fleet.",read:"8 min",href:"https://aakashporwal1602.github.io/rate-limiter-playground"},
-  {tag:"Streaming",t:"Schema contracts that don't break consumers",d:"Backward compatibility, dual-format rollout and CI gates — how to evolve a schema in production across many teams without a big-bang cutover.",read:"5 min",href:"https://www.linkedin.com/in/aakash-porwal-bab05b189"},
-  {tag:"Distributed Systems",t:"The celebrity problem in news feeds",d:"Fanout-on-write vs read, and the hybrid that pushes for normal users but pulls for celebrities — why the naive design falls over at scale.",read:"6 min",href:"https://www.linkedin.com/in/aakash-porwal-bab05b189"},
 ];
 
 /* ================= FALLBACK REPOS ================= */
@@ -645,14 +626,6 @@ function toggleXp(key){
   document.querySelectorAll('.xp-body').forEach(x=>x.classList.remove('open'));
   if(!wasOpen)el.classList.add('open');
 }
-
-/* ================= RENDER: BLOG ================= */
-document.getElementById('blog').innerHTML=BLOG.map(a=>`
-  <a class="article reveal" href="${a.href}" target="_blank" rel="noreferrer">
-    <div class="article-tag">${a.tag}</div>
-    <h3>${a.t}</h3><p>${a.d}</p>
-    <div class="article-foot"><span>${a.read} read</span><span class="read">Read ${EXT}</span></div>
-  </a>`).join('');
 
 /* ================= GITHUB API ================= */
 const reposEl=document.getElementById('repos');
